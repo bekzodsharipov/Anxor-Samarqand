@@ -38,9 +38,7 @@
                 <p>Bosh Direktor</p>
             </div>
             
-            <a href="#" class="event__btn" style="margin-bottom: 18px;">
-                BEPUL QATNASHISH
-            </a>
+            <button class="event__btn registerBtn" style="margin-bottom: 18px;">BEPUL QATNASHISH</button>
 
             <div class="timer__box">
                 <img src="./images/time.avif" loading="lazy" decoding="async" width="24" height="30" alt="time">
@@ -78,13 +76,68 @@
                 </li>
             </ul>
 
-            <a href="#" class="event__btn" style="margin-bottom: 30px;">
-                BEPUL QATNASHISH
-            </a>
+            <button class="event__btn registerBtn" style="margin-bottom: 30px;">BEPUL QATNASHISH</button>
         </div>
     </div>
+  <!-- Modal -->
+  <div id="registrationModal" class="homeModal" style="display: none">
+    <div class="homeModalOverlay"></div>
+    <div class="homeFormContainer">
+        <button class="closeButton" id="closeModalBtn" aria-label="Modalni yopish" title="Yopish">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 12" fill="none">
+                <path d="M1 11L11 1M1 1.00001L11 11" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" />
+            </svg>
+        </button>
+        <div class="homeFormTop">
+            <h1 class="homeFormTopTitle">
+                Bepul qatnashish uchun ma'lumotlaringizni kiriting!
+            </h1>
+        </div>
+        <form id="registrationForm" name="contact-form">
 
-    <script defer src="../js/app.js"></script>
+            <!-- TELEFON -->
+            <div class="HomeFormRow">
+                <label class="HomeFormRowLabel" for="phone">Telefon raqamingiz:</label>
+
+                <div class="phone-input-container">
+                    <!-- LEFT: country -->
+                    <button type="button" class="selected-country" id="selectedCountry">
+                        <span class="selected-flag" id="selectedCountryFlag">🇺🇿</span>
+
+                        <svg id="dropdownIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                        <span class="selected-code" id="selectedCountryCodeText">+998</span>
+                    </button>
+
+                    <!-- dropdown -->
+                    <div class="country-dropdown" id="countryDropdown" style="display:none"></div>
+
+                    <!-- RIGHT: phone input (number span inside) -->
+                    <div class="phone-field">
+                        <input class="HomeFormRowInput phone-input" type="tel" id="phone" name="phone"
+                            inputmode="numeric" placeholder="88 888 88 88" autocomplete="tel"
+                            style="border: none; background-color: transparent;padding-left: 5px;" />
+                    </div>
+                </div>
+
+                <p class="homeFormErrorText" id="phoneError" style="display:none">
+                    ❌ Telefon raqam mos emas!
+                </p>
+            </div>
+
+            <button type="submit" class="HomeFormBtn" id="submitBtn">
+                DAVOM ETISH
+            </button>
+        </form>
+
+    </div>
+</div>
+<script defer src="../js/phoneFormatter.js"></script>
+<script defer src="../js/app.js"></script>
 </body>
 
 </html>
