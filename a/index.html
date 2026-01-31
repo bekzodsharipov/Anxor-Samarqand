@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anxor Samarqand</title>
+    <style>
+     * {margin: 0;padding: 0;box-sizing: border-box;}html, body {overflow-x: hidden;}body {background-color: #F3EFE6;}.container {max-width: 490px;width: 100%;margin: 0 auto;padding: 0 10px;padding-top: 0;display: flex;flex-direction: column;align-items: center;font-family: sans-serif;position: relative;}.header {width: 100%;background-color: #FFFDF4;box-shadow: 0px 3px 4.6px 0px #00000017;border-radius: 4px 4px 20px 20px;padding: 17.5px 21px;display: flex;align-items: center;justify-content: space-between;gap: 12px;margin-bottom: 8px;min-width: 313px;max-width: 400px;}.header__box {display: flex;align-items: center;gap: 8px;}.header__text {font-family: Montserrat, sans-serif;color: #000;font-weight: 400;font-size: 18px;line-height: 100%;}.header__time {font-family: Montserrat, sans-serif;font-weight: 500;font-size: 18px;line-height: 100%;}.title {font-family: "Kuunari", sans-serif;font-weight: 700;font-size: clamp(30px, 9.4vw, 46px);line-height: 110%;text-align: center;text-transform: uppercase;position: relative;z-index: 2;color: #000F24;}.title span {color: #C5392C;}.center {position: relative;width: 100%;display: flex;align-items: center;justify-content: center;}.expert__img {object-fit: contain;max-width: clamp(260px, 82vw, 286px);width: 100%;height: auto;margin-bottom: -10px;position: relative;z-index: 1;}.speaker__gradient {background-image: url(./images/bg.avif);background-repeat: no-repeat;background-size: contain;background-position: center;max-width: 611px;width: 100%;height: 449px;position: absolute;top: 200px;left: 50%;transform: translateX(-50%);}.event__btn {cursor: pointer;max-width: 404px;text-decoration: none;width: 100%;display: flex;align-items: center;justify-content: center;border: none;background-color: transparent;position: relative;background: radial-gradient(35.48% 57.87% at 50% 100%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, #C5392C, #C5392C);box-shadow: 0px 5px 4px 0px #FFFFFF57 inset;box-shadow: 0px 5px 0px 0px #8A1E14;border-radius: 20px;padding: 27px 0;height: 91px;z-index: 20;font-family: Poppins, sans-serif;color: white;font-weight: 700;font-size: clamp(26px, 8vw, 30px);line-height: 120%;text-align: center;text-transform: uppercase;margin-bottom: 30px;}.info {display: flex;align-items: center;gap: 5px;z-index: 2;position: absolute;top: 450px;}.info p {font-family: Montserrat, sans-serif;font-weight: 500;font-style: Italic;font-size: 16px;line-height: 100%;text-align: center;color: white;}.timer__box {font-family: Poppins, sans-serif;font-weight: 700;font-size: clamp(25px, 7.5vw, 30px);line-height: 120%;text-transform: uppercase;}.center__info {display: flex;align-items: center;gap: 9px;padding: 14px 15px 9px 17px;background-color: white;margin-bottom: -3px;border-radius: 20px 20px 0 0;border: 1px solid #795B43;position: relative;z-index: 2;max-width: 331px;width: 100%;}.center__info__text {font-family: sans-serif;font-weight: 600;font-size: clamp(14px, 4.7vw, 18px);line-height: 120%;}@media (max-width:400px) {.speaker__gradient {top: 123px;}.info {top: 400px;}}@media (max-width:350px) {.center__info {max-width: 265px;padding: 8px 0 5px 15px;}.event__box {padding: 15px 12px 0 12px;}}
+    </style>
+
+    <link rel="stylesheet" href="./css/main.css" media="print" onload="this.media='all'" />
+    <noscript>
+        <link rel="stylesheet" href="./css/main.css" />
+    </noscript>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="header">
+                <div class="header__box">
+                    <img src="./images/calendar.png" alt="kalendar belgisi" style="margin-top: -3px;"
+                        class="header__text__img" width="18" height="18" loading="lazy" decoding="async">
+                    <p class="header__text">
+                        13-Fevral
+                    </p>
+                </div>
+                <p class="header__time">20:00</p>
+            </div>
+
+            <h1 class="title">
+                Samarqand shahar <br> markazidan <span>oyiga 6 mln <br> so'm to'lov qilib</span> uy oling
+            </h1>
+
+            <img src="./images/speaker.avif" alt="Speaker rasmi" class="expert__img minifyImg" decoding="async"
+                loading="lazy" width="286" height="306">
+            <div class="info">
+                <img src="./images/info.png" loading="lazy" decoding="async" width="18" height="18" alt="info">
+                <p>Bosh Direktor</p>
+            </div>
+            <div class="speaker__gradient"></div>
+
+            <div class="center__info">
+                <h3 class="center__info__text">Qatnashishga ulguring:</h3>
+                <p class="timer__box" id="timer">02:00</p>
+            </div>
+
+            <a href="#" class="event__btn">
+                BEPUL QATNASHISH
+            </a>
+
+
+            <div class="event__box">
+                <h2 class="event__list__title">taqdimotda:</h2>
+                <ul class="event__list">
+                    <li class="event__list__item">
+                        <div class="event__list__item__number">
+                            <img src="./images/verify.avif" alt="verify" width="35" height="35" decoding="async"
+                                loading="lazy">
+                        </div>
+                        <p class="event__list__item__text">
+                            Samarqand shahar markazi <span>Zarxal <br> restorani yaqinidan</span> xonadonlar
+                        </p>
+                    </li>
+                    <li class="event__list__item">
+                        <div class="event__list__item__number">
+                            <img src="./images/verify.avif" alt="verify" width="35" height="35" decoding="async"
+                                loading="lazy">
+                        </div>
+                        <p class="event__list__item__text">
+                            Loyiha 1.5 gektar bo’lib loyihada yopiq <br> xudud, <span>bog’cha, fitnes zal, savdo <br>
+                                do’konlari va o’z stadioniga</span> ega
+                        </p>
+                    </li>
+                    <li class="event__list__item">
+                        <div class="event__list__item__number">
+                            <img src="./images/verify.avif" alt="verify" width="35" height="35" decoding="async"
+                                loading="lazy">
+                        </div>
+                        <p class="event__list__item__text">
+                            Komfort klass xonadonlarni <span>ekonom <br> klass narxida</span> xarid qilish imkoni
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <a href="#" class="event__btn" style="margin-bottom: 48px;">
+                BEPUL QATNASHISH
+            </a>
+        </div>
+    </div>
+
+
+    <script defer src="../js/app.js"></script>
+</body>
+
+</html>
